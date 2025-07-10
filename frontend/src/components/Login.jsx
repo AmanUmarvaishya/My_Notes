@@ -18,19 +18,10 @@ export default function Login() {
       alert(err.response?.data?.msg || 'Login failed');
     }
   };
-   const GoogleAuthWrapper = () => {
-    return (
-      <GoogleOAuthProvider clientId="32712112537-1ef5ime2mvpohhrfdp0ar2u0jtskgv18.apps.googleusercontent.com">
-        <div className="bgColor">
-          <GoogleLogin />
-        </div>
-      </GoogleOAuthProvider>
-    );
-  };
-
+  
   return (
     <>
-    <GoogleAuthWrapper/>
+  
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input placeholder="email" value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />

@@ -19,7 +19,7 @@ function GoogleLogin() {
         localStorage.setItem("user-info", JSON.stringify(obj));
         // console.log(result.data.user);
         // console.log(token);
-        navigate("/home");
+        navigate("/notes");// for redirect url 
       }
     } catch (error) {
       alert('error occured')
